@@ -124,7 +124,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RouletteNeoLibrary\RouletteNeoLibrary.csproj">
+      <Project>{145B4506-6C61-4853-BCA2-44A92D6A021F}</Project>
+      <Name>RouletteNeoLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icon.ico" />
     <Content Include="Resources\tick.wav" />
