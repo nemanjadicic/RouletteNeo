@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouletteNeoUI", "RouletteNeoUI\RouletteNeoUI.csproj", "{7296B1B3-8CF1-4F6E-B2DF-8F433A14201F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouletteNeoLibrary", "RouletteNeoLibrary\RouletteNeoLibrary.csproj", "{145B4506-6C61-4853-BCA2-44A92D6A021F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7296B1B3-8CF1-4F6E-B2DF-8F433A14201F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7296B1B3-8CF1-4F6E-B2DF-8F433A14201F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7296B1B3-8CF1-4F6E-B2DF-8F433A14201F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145B4506-6C61-4853-BCA2-44A92D6A021F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145B4506-6C61-4853-BCA2-44A92D6A021F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145B4506-6C61-4853-BCA2-44A92D6A021F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145B4506-6C61-4853-BCA2-44A92D6A021F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
