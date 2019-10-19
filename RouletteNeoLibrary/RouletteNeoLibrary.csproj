@@ -49,13 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\MoneyManagement.cs" />
+    <Compile Include="BusinessLogic\NumberLogic.cs" />
+    <Compile Include="DataAccess\SQLiteDataAccess.cs" />
+    <Compile Include="IRouletteSession.cs" />
+    <Compile Include="Models\NumberModel.cs" />
+    <Compile Include="Models\RoundModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BusinessLogic\" />
-    <Folder Include="DataAccess\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
