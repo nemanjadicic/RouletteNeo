@@ -182,10 +182,10 @@ namespace RouletteNeoLibrary.BusinessLogic
 
 
 
-        public static RoundModel EnterNumber(byte digit, RoundModel round, IRouletteSession rouletteSessionForm)
+        public static RoundModel EnterNumber(byte digit, RoundModel round, IRouletteSession rouletteSessionForm, ISessionStart sessionStartForm)
         {
             round.WinningNumber = digit;
-            round.CalibrateBetUnit(round.Spin, rouletteSessionForm, digit);
+            round.CalibrateBetUnit(round.Spin, rouletteSessionForm, sessionStartForm, digit);
             round.CalibrateMoney(digit, rouletteSessionForm);
             round.ExpectedNumbers = GetExpectedNumbers(rouletteSessionForm, round);
 

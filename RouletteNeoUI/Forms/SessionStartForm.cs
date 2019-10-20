@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RouletteNeoLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +11,11 @@ using System.Windows.Forms;
 
 namespace RouletteNeoUI.Forms
 {
-    public partial class SessionStartForm : Form
+    public partial class SessionStartForm : Form, ISessionStart
     {
+        public decimal StartMoney { get; set; } = 0;
+        public decimal BetUnit { get; set; } = 0;
+
         public SessionStartForm()
         {
             InitializeComponent();
