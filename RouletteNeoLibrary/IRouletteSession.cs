@@ -37,5 +37,9 @@ namespace RouletteNeoLibrary
         /// Represents the user who is currently playing Roulette.
         /// </summary>
         UserModel CurrentUser { get; set; }
+
+
+
+        void Close();
     }
 }

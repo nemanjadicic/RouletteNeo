@@ -1,4 +1,5 @@
 ﻿using RouletteNeoLibrary;
+using RouletteNeoLibrary.DataAccess;
 using RouletteNeoLibrary.Models;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,29 @@ namespace RouletteNeoUI.Forms
         public RouletteSessionForm()
         {
             InitializeComponent();
+        }
+
+
+
+
+
+
+
+        public static void CheckIfUserHasWon(RoundModel round, UserModel currentUser, IRouletteSession rouletteSessionForm)
+        {
+            if (round.Spin > rouletteSessionForm.SessionStart)
+            {
+                if (round.Money >= rouletteSessionForm.Goal)
+                {
+                    currentUser.Won = true;
+
+                    YouWonForm wonFrm = new YouWonForm(currentUser, rouletteSessionForm);
+                    wonFrm.ShowDialog();
+                    rouletteSessionForm.Close();
+
+                    SQLiteDataAccess.UpdateUserWon(currentUser);
+                }
+            }
         }
     }
 }
