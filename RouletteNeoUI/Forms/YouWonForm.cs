@@ -12,8 +12,11 @@ using System.Windows.Forms;
 
 namespace RouletteNeoUI.Forms
 {
-    public partial class YouWonForm : Form
+    public partial class YouWonForm : Form, IUserWon
     {
+        public UserModel CurrentUser { get; set; }
+        public IRouletteSession rouletteSessionForm { get; set; }
+
         public YouWonForm(UserModel user, IRouletteSession rouletteSessionForm)
         {
             InitializeComponent();

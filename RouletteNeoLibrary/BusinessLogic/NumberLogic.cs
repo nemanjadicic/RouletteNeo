@@ -191,11 +191,32 @@ namespace RouletteNeoLibrary.BusinessLogic
 
             return round;
         }
-        
-        
-        
-        
-        
+
+
+
+
+
+        public static void CheckIfUserHasWon(RoundModel round, UserModel currentUser, IRouletteSession rouletteSessionForm, IUserWon userWonForm)
+        {
+            if (round.Spin > rouletteSessionForm.SessionStart)
+            {
+                if (round.Money >= rouletteSessionForm.Goal)
+                {
+                    currentUser.Won = true;
+
+                    //YouWonForm wonFrm = new YouWonForm(currentUser, rouletteSessionForm);
+                    userWonForm.ShowDialog();
+                    rouletteSessionForm.Close();
+
+                    SQLiteDataAccess.UpdateUserWon(currentUser);
+                }
+            }
+        }
+
+
+
+
+
         public static void ResetProgress(IRouletteSession rouletteSessionForm)
         {
             rouletteSessionForm.AllRounds.Clear();

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RouletteNeoLibrary;
+using RouletteNeoLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,7 @@ namespace RouletteNeoUI.Forms
 {
     public partial class BuySubForm : Form
     {
-        public BuySubForm()
+        public BuySubForm(UserModel user, IRouletteSession rouletteSessionForm)
         {
             InitializeComponent();
         }

@@ -198,6 +198,7 @@
             this.helpButton.TabIndex = 371;
             this.helpButton.Text = "HELP";
             this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
             // resetButton
             // 
@@ -208,6 +209,7 @@
             this.resetButton.TabIndex = 370;
             this.resetButton.Text = "RESTART";
             this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // spinsLabel
             // 
@@ -715,6 +717,7 @@
             this.undoButton.TabIndex = 330;
             this.undoButton.Text = "UNDO";
             this.undoButton.UseVisualStyleBackColor = true;
+            this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
             // 
             // textBox12
             // 
@@ -844,6 +847,7 @@
             this.inputTextBox.Size = new System.Drawing.Size(51, 24);
             this.inputTextBox.TabIndex = 317;
             this.inputTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.inputTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputTextBox_KeyDown);
             // 
             // lblSpins
             // 
@@ -943,6 +947,7 @@
             this.Name = "RouletteSessionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roulette Neo";
+            this.Load += new System.EventHandler(this.RouletteSessionForm_Load);
             this.moneyGroupBox.ResumeLayout(false);
             this.moneyGroupBox.PerformLayout();
             this.ResumeLayout(false);

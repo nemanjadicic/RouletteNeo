@@ -37,6 +37,8 @@ namespace RouletteNeoLibrary
         /// Represents the user who is currently playing Roulette.
         /// </summary>
         UserModel CurrentUser { get; set; }
+        ISessionStart sessionStartForm { get; set; }
+        IUserWon userWonForm { get; set; }
 
 
 
