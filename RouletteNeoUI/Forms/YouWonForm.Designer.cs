@@ -54,6 +54,7 @@
             this.playAgainButton.TabIndex = 253;
             this.playAgainButton.Text = "Play Again";
             this.playAgainButton.UseVisualStyleBackColor = true;
+            this.playAgainButton.Click += new System.EventHandler(this.playAgainButton_Click);
             // 
             // youWonLabel
             // 
