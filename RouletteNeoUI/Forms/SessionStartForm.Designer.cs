@@ -46,6 +46,7 @@
             this.startButton.TabIndex = 19;
             this.startButton.Text = "START";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // betUnitLabel
             // 
