@@ -137,6 +137,7 @@
             this.createAccountButton.TabIndex = 17;
             this.createAccountButton.Text = "Create Account";
             this.createAccountButton.UseVisualStyleBackColor = true;
+            this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
             // 
             // signupPasswordValue
             // 
@@ -253,6 +254,7 @@
             this.signInButton.TabIndex = 24;
             this.signInButton.Text = "Sign In";
             this.signInButton.UseVisualStyleBackColor = true;
+            this.signInButton.Click += new System.EventHandler(this.signInButton_Click);
             // 
             // rememberMeCheckBox
             // 
