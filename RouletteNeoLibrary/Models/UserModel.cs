@@ -14,7 +14,7 @@ namespace RouletteNeoLibrary.Models
         public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string EmailAdress { get; set; }
+        public string EmailAddress { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         /// <summary>
@@ -32,7 +32,7 @@ namespace RouletteNeoLibrary.Models
         {
             FirstName = firstname;
             LastName = lastname;
-            EmailAdress = email;
+            EmailAddress = email;
             Username = user;
             Password = pass;
         }

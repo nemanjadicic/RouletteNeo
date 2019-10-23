@@ -16,8 +16,8 @@ namespace RouletteNeoLibrary.DataAccess
         private const string UpdateUserWonField = "UPDATE Users SET Won = 1 WHERE Id = @Id";
         private const string GetAllUsers = "SELECT * FROM Users";
         private const string UpdateUserSubscriptionField = "UPDATE Users SET BoughtSub = 1 WHERE Id = @Id";
-        private const string InsertNewUser = "INSERT INTO Users (FirstName, LastName, EmailAdress, Username, Password)" +
-            "VALUES (@FirstName, @LastName, @EmailAdress, @Username, @Password)";
+        private const string InsertNewUser = "INSERT INTO Users (FirstName, LastName, EmailAddress, Username, Password)" +
+            " VALUES (@FirstName, @LastName, @EmailAddress, @Username, @Password)";
 
 
 
