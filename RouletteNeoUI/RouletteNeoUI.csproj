@@ -84,6 +84,8 @@
     <Compile Include="Forms\YouWonForm.Designer.cs">
       <DependentUpon>YouWonForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\MoneyManagement.cs" />
+    <Compile Include="Logic\UserInputHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\BuySubForm.resx">

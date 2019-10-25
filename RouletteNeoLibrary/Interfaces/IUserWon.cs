@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RouletteNeoLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +8,10 @@ using System.Windows.Forms;
 
 namespace RouletteNeoLibrary
 {
-    public interface ISessionStart
+    public interface IUserWon
     {
-        decimal StartMoney { get; set; }
-        decimal BetUnit { get; set; }
-        
+        UserModel CurrentUser { get; set; }
+        IRouletteSession rouletteSessionForm { get; set; }
         DialogResult ShowDialog();
     }
 }

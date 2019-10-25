@@ -1,23 +1,26 @@
-﻿using RouletteNeoLibrary.Models;
+﻿using RouletteNeoLibrary;
+using RouletteNeoLibrary.BusinessLogic;
+using RouletteNeoLibrary.Models;
+using RouletteNeoUI.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RouletteNeoLibrary.BusinessLogic
+namespace RouletteNeoUI.Logic
 {
     public static class MoneyManagement
     {
-        public static RoundModel CalibrateBetUnit(this RoundModel round, int spin, IRouletteSession rouletteSess, ISessionStart sessionStartForm, byte winningNumber)
+        public static RoundModel CalibrateBetUnit(this RoundModel round, int spin, IRouletteSession rouletteSess, ISessionStart sessionStart, byte winningNumber)
         {
             if (round.Spin == rouletteSess.SessionStart)
             {
-                //SessionStartForm startForm = new SessionStartForm();
-                sessionStartForm.ShowDialog();
+                sessionStart = new SessionStartForm();
+                sessionStart.ShowDialog();
 
-                rouletteSess.StartingMoney = sessionStartForm.StartMoney;
-                rouletteSess.StartingBetUnit = sessionStartForm.BetUnit;
+                rouletteSess.StartingMoney = sessionStart.StartMoney;
+                rouletteSess.StartingBetUnit = sessionStart.BetUnit;
 
                 rouletteSess.Goal = rouletteSess.StartingMoney + rouletteSess.StartingBetUnit * 50;
                 round.Money = rouletteSess.StartingMoney;

@@ -51,12 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogic\MoneyManagement.cs" />
     <Compile Include="BusinessLogic\NumberLogic.cs" />
     <Compile Include="DataAccess\SQLiteDataAccess.cs" />
-    <Compile Include="IRouletteSession.cs" />
-    <Compile Include="ISessionStart.cs" />
-    <Compile Include="IUserWon.cs" />
+    <Compile Include="Interfaces\IRouletteSession.cs" />
+    <Compile Include="Interfaces\ISessionStart.cs" />
+    <Compile Include="Interfaces\IUserWon.cs" />
     <Compile Include="Models\NumberModel.cs" />
     <Compile Include="Models\RoundModel.cs" />
     <Compile Include="Models\UserModel.cs" />

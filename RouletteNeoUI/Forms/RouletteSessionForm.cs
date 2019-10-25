@@ -2,6 +2,7 @@
 using RouletteNeoLibrary.BusinessLogic;
 using RouletteNeoLibrary.DataAccess;
 using RouletteNeoLibrary.Models;
+using RouletteNeoUI.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -242,13 +243,13 @@ namespace RouletteNeoUI.Forms
 
             RoundModel round = new RoundModel();
             round.Spin = AllRounds.Count() + 1;
-            round = NumberLogic.EnterNumber(digit, round, this, sessionStartForm);
+            round = UserInputHelper.EnterNumber(digit, round, this, sessionStartForm);
             AllRounds.Add(round);
 
 
 
             NumberLogic.UpdateNumberProperties(digit, this);
-            NumberLogic.CheckIfUserHasWon(round, CurrentUser, this, userWonForm);
+            UserInputHelper.CheckIfUserHasWon(round, CurrentUser, this, userWonForm);
 
 
 
@@ -273,14 +274,14 @@ namespace RouletteNeoUI.Forms
                     {
                         if (currentNumber == number.Digit)
                         {
-                            round = NumberLogic.EnterNumber(currentNumber, round, this, sessionStartForm);
+                            round = UserInputHelper.EnterNumber(currentNumber, round, this, sessionStartForm);
                         }
                     }
 
                     AllRounds.Add(round);
 
                     NumberLogic.UpdateNumberProperties(currentNumber, this);
-                    NumberLogic.CheckIfUserHasWon(round, CurrentUser, this, userWonForm);
+                    UserInputHelper.CheckIfUserHasWon(round, CurrentUser, this, userWonForm);
                 }
 
                 inputTextBox.Clear();
