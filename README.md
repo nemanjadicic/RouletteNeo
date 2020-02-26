@@ -14,6 +14,7 @@ To be able to use this app you'll need:
 ### Quick Start
 1. Clone the repository to your computer and open Roultte Neo solution in Visual Studio.
 2. Press F5 to start the Roulette Neo app.
+
 **To start the algorithm tester:**
 1. Clone the repository to your computer and open Roulette Neo solution in Visual Studio.
 2. In Solution Explorer, right click on "RouletteNeoAlgorithmTester" project and choose "Set As StartUp Project".
