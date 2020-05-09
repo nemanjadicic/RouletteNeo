@@ -12,7 +12,7 @@ To be able to use this app you'll need:
 * Browser, mobile or desktop based virtual Roulette casino game.
 
 ### Quick Start
-1. Clone the repository to your computer and open Roultte Neo solution in Visual Studio.
+1. Clone the repository to your computer and open Roulette Neo solution in Visual Studio.
 2. Press F5 to start the Roulette Neo app.
 
 **To start the algorithm tester:**
