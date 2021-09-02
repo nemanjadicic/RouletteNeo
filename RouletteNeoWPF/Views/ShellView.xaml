@@ -38,6 +38,40 @@
                     x:Name="ExitButton" Click="ExitButton_Click" />
             
             <!-- CONTENT AREA -->
+            <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4" Margin="20 180 20 230">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- USERNAME -->
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Your Name:" VerticalAlignment="Center" />
+                <TextBox Grid.Row="0" Grid.Column="1" Text="Guest" VerticalContentAlignment="Center" 
+                 HorizontalContentAlignment="Center" Padding="2" Margin="2" x:Name="UsernameTextBox"/>
+
+                <!-- STARTING MONEY -->
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Starting Money:" VerticalAlignment="Center" />
+                <TextBox Grid.Row="1" Grid.Column="1" Text="2000.00" VerticalContentAlignment="Center" 
+                 HorizontalContentAlignment="Center" Padding="2" Margin="2" x:Name="StartingMoneyTextBox"/>
+
+                <!-- BETTING UNIT -->
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Betting Unit:" VerticalAlignment="Center" />
+                <TextBox Grid.Row="2" Grid.Column="1" Text="1.00" VerticalContentAlignment="Center" 
+                 HorizontalContentAlignment="Center" Padding="2" Margin="2" x:Name="BettingUnitTextBox"/>
+
+                <!-- START BUTTON -->
+                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="90 0" Content="Start"
+                FontSize="20" FontWeight="SemiBold" FontStyle="Italic" x:Name="StartButton" Click="StartButton_Click" />
+            </Grid>
+            
+            <!-- Roulette Session View Area -->
             <ContentControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" x:Name="ActiveView" />
         </Grid>
     </Border>

@@ -30,5 +30,16 @@ namespace RouletteNeoWPF.Views
         {
             Close();
         }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            string user = UsernameTextBox.Text;
+            float startMoney = float.Parse(StartingMoneyTextBox.Text);
+            float betUnit = float.Parse(BettingUnitTextBox.Text);
+
+            RouletteSessionView rouletteSession = new RouletteSessionView(user, startMoney, betUnit);
+
+            ActiveView.Content = rouletteSession;
+        }
     }
 }
