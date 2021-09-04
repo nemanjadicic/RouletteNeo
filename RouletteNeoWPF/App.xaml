@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:RouletteNeoWPF"
              StartupUri="Views/ShellView.xaml">
     <Application.Resources>
-        <Style TargetType="Button" x:Key="buttonHover">
+        <Style TargetType="Button" x:Key="TopButtonHover">
             <Setter Property="Background" Value="AliceBlue"/>
             <Setter Property="Foreground" Value="DarkBlue"/>
             <Setter Property="Template">
@@ -24,13 +24,16 @@
             </Style.Triggers>
         </Style>
 
-        <Style TargetType="Button" x:Key="menuButtonHover">
-            <Setter Property="Background" Value="LightBlue"/>
-            <Setter Property="Foreground" Value="DarkBlue"/>
+        <Style TargetType="Button" x:Key="GreenButtonHover">
+            <Setter Property="Foreground" Value="Green" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="5" BorderThickness="1" Padding="5">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Green" BorderThickness="1">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
@@ -38,8 +41,53 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="RoyalBlue"/>
-                    <Setter Property="Foreground" Value="AliceBlue"/>
+                    <Setter Property="Background" Value="LightGreen"/>
+                    <Setter Property="Foreground" Value="DarkGreen"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="Button" x:Key="BlackButtonHover">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="DarkGray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="Button" x:Key="RedButtonHover">
+            <Setter Property="Foreground" Value="Red" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Red" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Salmon"/>
+                    <Setter Property="Foreground" Value="DarkRed"/>
                 </Trigger>
             </Style.Triggers>
         </Style>

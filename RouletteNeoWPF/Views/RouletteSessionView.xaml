@@ -4,9 +4,259 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RouletteNeoWPF.Views" FontSize="14"
-             mc:Ignorable="d" Background="Green" FontFamily="Lato"
+             mc:Ignorable="d" Background="AliceBlue" FontFamily="Lato"
              d:DesignHeight="645" d:DesignWidth="365">
-    <Grid>
+    <Grid Margin="0 20 0 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="14*" />
+        </Grid.RowDefinitions>
+        
+        <!-- Welcome User -->
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" Text="Welcome [Username]!" x:Name="WelcomeTextBlock"
+                    FontSize="18" FontStyle="Italic" Foreground="DarkBlue" />
+        
+        <!-- Main Content Grid -->
+        <Grid Grid.Row="1" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="6*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Part -->
+            <Grid Grid.Column="0" Margin="0 0 5 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                
+                <!-- Spins -->
+                <TextBlock Grid.Row="0" Text="SPINS:" VerticalAlignment="Bottom" FontWeight="SemiBold"
+                           FontStyle="Italic" HorizontalAlignment="Center" FontSize="16" />
+                <TextBlock Grid.Row="1" Text="0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="16"
+                           FontStyle="Italic" HorizontalAlignment="Center" x:Name="SpinsTextbox" />
+                
+                <!-- Input & undo -->
+                <TextBox Grid.Row="2" x:Name="InputTextBox" Padding="2" Margin="0 1" HorizontalContentAlignment="Center" />
+                <Button Grid.Row="3" Content="UNDO" FontWeight="SemiBold" x:Name="UndoButton" Margin="0 1" />
+
+                <!-- Past 12 Numbers -->
+                <TextBox Grid.Row="4" x:Name="TextBox1" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="5" x:Name="TextBox2" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="6" x:Name="TextBox3" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="7" x:Name="TextBox4" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="8" x:Name="TextBox5" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="9" x:Name="TextBox6" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="10" x:Name="TextBox7" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="11" x:Name="TextBox8" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="12" x:Name="TextBo9x" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="13" x:Name="TextBox10" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="14" x:Name="TextBox11" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="15" x:Name="TextBox12" IsReadOnly="True" Padding="2" Margin="0 1" />
+                
+                <!-- Copyright -->
+                <TextBlock Grid.Row="17" Text="Copyright: Nemanja Dicić" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                           TextWrapping="Wrap" FontSize="12" Grid.RowSpan="2" />
+                <!--<TextBlock Grid.Row="17" Text="Nemanja" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="12" />
+                <TextBlock Grid.Row="18" Text="Dicić" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" />-->
+            </Grid>
+
+            <!-- Middle Part -->
+            <Grid Grid.Column="1"  Margin="5 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <!-- Zero -->
+                <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="0 2" x:Name="Button0" 
+                        Content="0" Style="{StaticResource GreenButtonHover}" />
+                
+                <!-- Red/Black/Red -->
+                <Button Grid.Row="1" Grid.Column="0" Margin="0 2 2 2" x:Name="Button1" 
+                        Content="1" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="1" Grid.Column="1" Margin="1 2" x:Name="Button2" 
+                        Content="2" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="1" Grid.Column="2" Margin="2 2 0 2" x:Name="Button3" 
+                        Content="3" Style="{StaticResource RedButtonHover}" />
+                
+                <!-- Black/Red/Black -->
+                <Button Grid.Row="2" Grid.Column="0" Margin="0 2 2 2" x:Name="Button4" 
+                        Content="4" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="2" Grid.Column="1" Margin="1 2" x:Name="Button5" 
+                        Content="5" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="2" Grid.Column="2" Margin="2 2 0 2" x:Name="Button6" 
+                        Content="6" Style="{StaticResource BlackButtonHover}" />
+
+                <!-- Red/Black/Red -->
+                <Button Grid.Row="3" Grid.Column="0" Margin="0 2 2 2" x:Name="Button7" 
+                        Content="7" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="3" Grid.Column="1" Margin="1 2" x:Name="Button8" 
+                        Content="8" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="3" Grid.Column="2" Margin="2 2 0 2" x:Name="Button9" 
+                        Content="9" Style="{StaticResource RedButtonHover}" />
+
+                <!-- Black/Black/Red -->
+                <Button Grid.Row="4" Grid.Column="0" Margin="0 2 2 2" x:Name="Button10" 
+                        Content="10" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="4" Grid.Column="1" Margin="1 2" x:Name="Button11" 
+                        Content="11" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="4" Grid.Column="2" Margin="2 2 0 2" x:Name="Button12" 
+                        Content="12" Style="{StaticResource RedButtonHover}" />
+
+                <!-- Black/Red/Black -->
+                <Button Grid.Row="5" Grid.Column="0" Margin="0 2 2 2" x:Name="Button13" 
+                        Content="13" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="5" Grid.Column="1" Margin="1 2" x:Name="Button14" 
+                        Content="14" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="5" Grid.Column="2" Margin="2 2 0 2" x:Name="Button15" 
+                        Content="15" Style="{StaticResource BlackButtonHover}" />
+
+                <!-- Red/Black/Red -->
+                <Button Grid.Row="6" Grid.Column="0" Margin="0 2 2 2" x:Name="Button16" 
+                        Content="16" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="6" Grid.Column="1" Margin="1 2" x:Name="Button17" 
+                        Content="17" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="6" Grid.Column="2" Margin="2 2 0 2" x:Name="Button18" 
+                        Content="18" Style="{StaticResource RedButtonHover}" />
+
+                <!-- Red/Black/Red -->
+                <Button Grid.Row="7" Grid.Column="0" Margin="0 2 2 2" x:Name="Button19" 
+                        Content="19" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="7" Grid.Column="1" Margin="1 2" x:Name="Button20" 
+                        Content="20" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="7" Grid.Column="2" Margin="2 2 0 2" x:Name="Button21" 
+                        Content="21" Style="{StaticResource RedButtonHover}" />
+
+                <!-- Black/Red/Black -->
+                <Button Grid.Row="8" Grid.Column="0" Margin="0 2 2 2" x:Name="Button22" 
+                        Content="22" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="8" Grid.Column="1" Margin="1 2" x:Name="Button23" 
+                        Content="23" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="8" Grid.Column="2" Margin="2 2 0 2" x:Name="Button24" 
+                        Content="24" Style="{StaticResource BlackButtonHover}" />
+
+                <!-- Red/Black/Red -->
+                <Button Grid.Row="9" Grid.Column="0" Margin="0 2 2 2" x:Name="Button25" 
+                        Content="25" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="9" Grid.Column="1" Margin="1 2" x:Name="Button26" 
+                        Content="26" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="9" Grid.Column="2" Margin="2 2 0 2" x:Name="Button27" 
+                        Content="27" Style="{StaticResource RedButtonHover}" />
+
+                <!-- Black/Black/Red -->
+                <Button Grid.Row="10" Grid.Column="0" Margin="0 2 2 2" x:Name="Button28" 
+                        Content="28" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="10" Grid.Column="1" Margin="1 2" x:Name="Button29" 
+                        Content="29" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="10" Grid.Column="2" Margin="2 2 0 2" x:Name="Button30" 
+                        Content="30" Style="{StaticResource RedButtonHover}" />
+
+                <!-- Black/Red/Black -->
+                <Button Grid.Row="11" Grid.Column="0" Margin="0 2 2 2" x:Name="Button31" 
+                        Content="31" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="11" Grid.Column="1" Margin="1 2" x:Name="Button32" 
+                        Content="32" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="11" Grid.Column="2" Margin="2 2 0 2" x:Name="Button33" 
+                        Content="33" Style="{StaticResource BlackButtonHover}" />
+
+                <!-- Red/Black/Red -->
+                <Button Grid.Row="12" Grid.Column="0" Margin="0 2 2 2" x:Name="Button34" 
+                        Content="34" Style="{StaticResource RedButtonHover}" />
+                <Button Grid.Row="12" Grid.Column="1" Margin="1 2" x:Name="Button35" 
+                        Content="35" Style="{StaticResource BlackButtonHover}" />
+                <Button Grid.Row="12" Grid.Column="2" Margin="2 2 0 2" x:Name="Button36" 
+                        Content="36" Style="{StaticResource RedButtonHover}" />
+            </Grid>
             
+            <!-- Right Part -->
+            <Grid Grid.Column="2" Margin="5 0 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="8*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                
+                <!-- GroupBox -->
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BorderThickness="0.5" 
+                        CornerRadius="5" BorderBrush="Black">
+                    
+                    <Grid Margin="10 30 0 30">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Row 1 -->
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Goal:" VerticalAlignment="Center" HorizontalAlignment="Left" 
+                                   FontSize="15" Foreground="Black" />
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="2050,00" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                   x:Name="GoalTextBlock" FontSize="15" Foreground="Black" />
+
+                        <!-- Row 2 -->
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Money:" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                   FontSize="15" Foreground="Black" />
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="2000,00" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                   x:Name="MoneyTextBlock" FontSize="15" Foreground="Black" />
+
+                        <!-- Row 3 -->
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Bet Unit:" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                   FontSize="15" Foreground="Black" />
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="50,00" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                   x:Name="BetUnitTextBlock" FontSize="15" Foreground="Black" />
+                    </Grid>
+                </Border>
+
+                <RichTextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 5 0 0" IsReadOnly="True" x:Name="OutputRichTextBox" />
+
+                <!-- Help & Restart -->
+                <Button Grid.Row="2" Grid.Column="0" Margin="0 5 5 0" x:Name="HelpButton" Content="HELP" FontWeight="SemiBold" />
+                <Button Grid.Row="2" Grid.Column="1" Margin="0 5 0 0" x:Name="RestartButton" Content="RESTART" FontWeight="SemiBold" />
+            </Grid>
+        </Grid>
+        
     </Grid>
 </UserControl>
