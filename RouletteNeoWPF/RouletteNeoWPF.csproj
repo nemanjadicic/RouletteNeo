@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\fireworks1.gif" />
     <None Remove="Resources\icon.ico" />
     <None Remove="Resources\tick.wav" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\fireworks1.gif" />
     <Resource Include="Resources\icon.ico" />
     <Resource Include="Resources\tick.wav" />
   </ItemGroup>

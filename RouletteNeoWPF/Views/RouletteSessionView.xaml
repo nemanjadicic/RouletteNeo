@@ -56,7 +56,8 @@
                 
                 <!-- Input & undo -->
                 <TextBox Grid.Row="2" x:Name="InputTextBox" Padding="2" Margin="0 1" HorizontalContentAlignment="Center" />
-                <Button Grid.Row="3" Content="UNDO" FontWeight="SemiBold" x:Name="UndoButton" Margin="0 1" />
+                <Button Grid.Row="3" Content="UNDO" FontWeight="SemiBold" x:Name="UndoButton" Margin="0 1"
+                        Click="UndoButton_Click" />
 
                 <!-- Past 12 Numbers -->
                 <TextBox Grid.Row="4" x:Name="TextBox1" IsReadOnly="True" Padding="2" Margin="0 1" />
@@ -253,10 +254,14 @@
                 <RichTextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 5 0 0" IsReadOnly="True" x:Name="OutputRichTextBox" />
 
                 <!-- Help & Restart -->
-                <Button Grid.Row="2" Grid.Column="0" Margin="0 5 5 0" x:Name="HelpButton" Content="HELP" FontWeight="SemiBold" />
-                <Button Grid.Row="2" Grid.Column="1" Margin="0 5 0 0" x:Name="RestartButton" Content="RESTART" FontWeight="SemiBold" />
+                <Button Grid.Row="2" Grid.Column="0" Margin="0 5 5 0" x:Name="HelpButton" Content="HELP" FontWeight="SemiBold"
+                        Click="HelpButton_Click" />
+                <Button Grid.Row="2" Grid.Column="1" Margin="0 5 0 0" x:Name="RestartButton" Content="RESTART" FontWeight="SemiBold"
+                        Click="RestartButton_Click" />
             </Grid>
         </Grid>
-        
+
+        <ContentControl Grid.Row="0" Grid.RowSpan="2" x:Name="UserWonView" />
+
     </Grid>
 </UserControl>
