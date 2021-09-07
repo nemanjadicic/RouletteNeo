@@ -23,9 +23,9 @@ namespace RouletteNeoWPF.Views
             UserName = user;
 
             WelcomeTextBlock.Text = $"Welcome {UserName}!";
-            MoneyTextBlock.Text =  startMoney.ToString("0.00");
-            GoalTextBlock.Text = (startMoney + betUnit * 50).ToString("0.00");
-            BetUnitTextBlock.Text = betUnit.ToString("0.00");
+            GoalTextBlock.Text = (startMoney + betUnit * 50).ToString();
+            MoneyTextBlock.Text =  startMoney.ToString();
+            BetUnitTextBlock.Text = betUnit.ToString();
 
 
 
@@ -90,7 +90,7 @@ namespace RouletteNeoWPF.Views
             tickSound.Play();
         }
 
-        private void InputTextBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private void InputTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             Round round = new Round();
             round.Spin = AllRounds.Count() + 1;
@@ -192,24 +192,24 @@ namespace RouletteNeoWPF.Views
 
             TextBox1.Text = round.WinningNumber.ToString();
 
-            GoalTextBlock.Text = $"Goal: {Goal.ToString("0.00")}";
-            MoneyTextBlock.Text = $"Money: {round.Money.ToString("0.00")}";
-            BetUnitTextBlock.Text = $"Bet Unit: {round.BetUnit.ToString("0.00")}";
+            GoalTextBlock.Text = Goal.ToString();
+            MoneyTextBlock.Text = round.Money.ToString();
+            BetUnitTextBlock.Text = round.BetUnit.ToString();
 
             if (round.Spin >= SessionStart)
             {
                 OutputRichTextBox.Document.Blocks.Clear();
-                OutputRichTextBox.HorizontalContentAlignment = HorizontalAlignment.Center;
+                OutputRichTextBox.Document.TextAlignment = TextAlignment.Center;
                 if (round.ExpectedNumbers != null)
                 {
-                    OutputRichTextBox.AppendText($"Place {round.BetUnit.ToString("0.00")} on the {round.ExpectedNumbers.Count} expected numbers: " +
+                    OutputRichTextBox.AppendText($"Place {round.BetUnit} on the {round.ExpectedNumbers.Count} expected numbers: " +
                                 $"\n\n\n" + String.Join(", ", round.ExpectedNumbers));
                 }
             }
             else
             {
                 OutputRichTextBox.Document.Blocks.Clear();
-                OutputRichTextBox.HorizontalContentAlignment = HorizontalAlignment.Center;
+                OutputRichTextBox.Document.TextAlignment = TextAlignment.Center;
                 OutputRichTextBox.AppendText($"Expected numbers: \n\n\n ???");
             }
         }
@@ -306,12 +306,12 @@ namespace RouletteNeoWPF.Views
 
             SpinsTextblock.Text = "0";
 
-            GoalTextBlock.Text = Goal.ToString("0.00");
-            MoneyTextBlock.Text = StartingMoney.ToString("0.00");
-            BetUnitTextBlock.Text = StartingBetUnit.ToString("0.00");
+            GoalTextBlock.Text = Goal.ToString();
+            MoneyTextBlock.Text = StartingMoney.ToString();
+            BetUnitTextBlock.Text = StartingBetUnit.ToString();
 
             OutputRichTextBox.Document.Blocks.Clear();
-            OutputRichTextBox.HorizontalContentAlignment = HorizontalAlignment.Center;
+            OutputRichTextBox.Document.TextAlignment = TextAlignment.Center;
             OutputRichTextBox.AppendText($"Expected numbers: \n\n\n ???");
         }
     }
