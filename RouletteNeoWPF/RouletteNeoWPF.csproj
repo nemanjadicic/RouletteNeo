@@ -19,7 +19,7 @@
   <ItemGroup>
     <Resource Include="Resources\fireworks1.gif" />
     <Resource Include="Resources\icon.ico" />
-    <Resource Include="Resources\tick.wav" />
+    <Content Include="Resources\tick.wav" />
   </ItemGroup>
 
 </Project>

@@ -52,26 +52,27 @@
                 <TextBlock Grid.Row="0" Text="SPINS:" VerticalAlignment="Bottom" FontWeight="SemiBold"
                            FontStyle="Italic" HorizontalAlignment="Center" FontSize="16" />
                 <TextBlock Grid.Row="1" Text="0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="16"
-                           FontStyle="Italic" HorizontalAlignment="Center" x:Name="SpinsTextbox" />
+                           FontStyle="Italic" HorizontalAlignment="Center" x:Name="SpinsTextblock" />
                 
                 <!-- Input & undo -->
-                <TextBox Grid.Row="2" x:Name="InputTextBox" Padding="2" Margin="0 1" HorizontalContentAlignment="Center" />
+                <TextBox Grid.Row="2" x:Name="InputTextBox" Padding="2" Margin="0 1" HorizontalContentAlignment="Center"
+                         KeyDown="InputTextBox_KeyDown" />
                 <Button Grid.Row="3" Content="UNDO" FontWeight="SemiBold" x:Name="UndoButton" Margin="0 1"
                         Click="UndoButton_Click" />
 
                 <!-- Past 12 Numbers -->
-                <TextBox Grid.Row="4" x:Name="TextBox1" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="5" x:Name="TextBox2" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="6" x:Name="TextBox3" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="7" x:Name="TextBox4" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="8" x:Name="TextBox5" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="9" x:Name="TextBox6" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="10" x:Name="TextBox7" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="11" x:Name="TextBox8" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="12" x:Name="TextBo9x" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="13" x:Name="TextBox10" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="14" x:Name="TextBox11" IsReadOnly="True" Padding="2" Margin="0 1" />
-                <TextBox Grid.Row="15" x:Name="TextBox12" IsReadOnly="True" Padding="2" Margin="0 1" />
+                <TextBox Grid.Row="4" x:Name="TextBox1" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="5" x:Name="TextBox2" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="6" x:Name="TextBox3" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="7" x:Name="TextBox4" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="8" x:Name="TextBox5" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="9" x:Name="TextBox6" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="10" x:Name="TextBox7" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="11" x:Name="TextBox8" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="12" x:Name="TextBox9" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="13" x:Name="TextBox10" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="14" x:Name="TextBox11" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
+                <TextBox Grid.Row="15" x:Name="TextBox12" IsReadOnly="True" Padding="2" Margin="0 1" TextChanged="TextBox_TextChanged" />
                 
                 <!-- Copyright -->
                 <TextBlock Grid.Row="17" Text="Copyright: Nemanja Dicić" HorizontalAlignment="Center" VerticalAlignment="Center" 
@@ -235,7 +236,7 @@
                         <TextBlock Grid.Row="0" Grid.Column="0" Text="Goal:" VerticalAlignment="Center" HorizontalAlignment="Left" 
                                    FontSize="15" Foreground="Black" />
                         <TextBlock Grid.Row="0" Grid.Column="1" Text="2050,00" VerticalAlignment="Center" HorizontalAlignment="Left"
-                                   x:Name="GoalTextBlock" FontSize="15" Foreground="Black" />
+                                   x:Name="GoalTextBlock" FontSize="15" Foreground="Green" />
 
                         <!-- Row 2 -->
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Money:" VerticalAlignment="Center" HorizontalAlignment="Left"
