@@ -25,7 +25,7 @@
 
         <TextBlock Grid.Row="4" Foreground="AliceBlue" Text="Congratulations [Username]" x:Name="CongratzTextBlock" TextWrapping="Wrap"
                    HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontStyle="Italic" FontWeight="SemiBold" />
-        <TextBlock Grid.Row="5" Foreground="AliceBlue" Text="You Won!!!" HorizontalAlignment="Center" VerticalAlignment="Center" 
+        <TextBlock Grid.Row="5" Foreground="AliceBlue" Text="You Won 50 Units!" HorizontalAlignment="Center" VerticalAlignment="Center" 
                    FontSize="24" FontStyle="Italic" FontWeight="SemiBold" />
     </Grid>
 

@@ -233,38 +233,38 @@
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BorderThickness="0.5" 
                         CornerRadius="5" BorderBrush="Black">
                     
-                    <Grid Margin="10 30 0 30">
+                    <Grid Margin="7 30 0 30">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
                             <RowDefinition Height="*" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="2.5*" />
                         </Grid.ColumnDefinitions>
 
                         <!-- Row 1 -->
                         <TextBlock Grid.Row="0" Grid.Column="0" Text="Goal:" VerticalAlignment="Center" HorizontalAlignment="Left" 
                                    FontSize="15" Foreground="Black" />
-                        <TextBlock Grid.Row="0" Grid.Column="1" Text="2050" VerticalAlignment="Center" HorizontalAlignment="Left"
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="2050.00" VerticalAlignment="Center" HorizontalAlignment="Left"
                                    x:Name="GoalTextBlock" FontSize="15" Foreground="Green" />
 
                         <!-- Row 2 -->
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Money:" VerticalAlignment="Center" HorizontalAlignment="Left"
                                    FontSize="15" Foreground="Black" />
-                        <TextBlock Grid.Row="1" Grid.Column="1" Text="2000" VerticalAlignment="Center" HorizontalAlignment="Left"
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="2000.00" VerticalAlignment="Center" HorizontalAlignment="Left"
                                    x:Name="MoneyTextBlock" FontSize="15" Foreground="Black" />
 
                         <!-- Row 3 -->
                         <TextBlock Grid.Row="2" Grid.Column="0" Text="Bet Unit:" VerticalAlignment="Center" HorizontalAlignment="Left"
                                    FontSize="15" Foreground="Black" />
-                        <TextBlock Grid.Row="2" Grid.Column="1" Text="1" VerticalAlignment="Center" HorizontalAlignment="Left"
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="1.00" VerticalAlignment="Center" HorizontalAlignment="Left"
                                    x:Name="BetUnitTextBlock" FontSize="15" Foreground="Black" />
                     </Grid>
                 </Border>
 
-                <RichTextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 5 0 0" IsReadOnly="True" FontSize="16" 
+                <RichTextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 5 0 0" IsReadOnly="True" FontSize="16" Padding="10"
                              FontWeight="SemiBold" Foreground="Blue" x:Name="OutputRichTextBox" HorizontalContentAlignment="Center" />
 
                 <!-- Help & Restart -->

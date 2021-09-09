@@ -123,42 +123,17 @@ namespace RouletteNeoWPF.Logic
             int notHappenedDistance = 7;    // CHANGEABLE PARAMETER. Represents how far is Number's NotHappened value from the Number's AverageGap value.
 
             List<int> expectedNumbers = new List<int>();
-            List<int> happenedList = new List<int>();
             float globalAverageGap = CalculateGlobalAverageGap(rouletteSession);
-            double happenedAVG = CalculateHappenedAverage(rouletteSession);
 
             foreach (var number in rouletteSession.AllRouletteNumbers)
             {
-                //if (number.Happened == happenedAVG)
-                //{
-                //    happenedList.Add(number.Digit);
-                //}
-
-
-
                 if (number.NotHappened >= (globalAverageGap - notHappenedDistance) && number.NotHappened <= (globalAverageGap + notHappenedDistance))
                 {
-                    if (happenedList.Contains(number.Digit))
+                    if (!expectedNumbers.Contains(number.Digit))
                     {
-                        if (!expectedNumbers.Contains(number.Digit))
-                        {
-                            expectedNumbers.Add(number.Digit);
-                        }
+                        expectedNumbers.Add(number.Digit);
                     }
                 }
-
-
-
-                //if (number.NotHappened >= (number.AverageGap - notHappenedDistance) && number.NotHappened <= (number.AverageGap + notHappenedDistance))
-                //{
-                //    if (happenedList.Contains(number.Digit))
-                //    {
-                //        if (!expectedNumbers.Contains(number.Digit))
-                //        {
-                //            expectedNumbers.Add(number.Digit);
-                //        }
-                //    }
-                //}
             }
 
             return expectedNumbers;

@@ -8,6 +8,12 @@ namespace RouletteNeoWPF.Logic
     {
         public static Round CalibrateBetUnit(this Round round, int spin, RouletteSessionView rouletteSession, int winningNumber)
         {
+            if (round.Spin <= rouletteSession.SessionStart)
+            {
+                round.Money = rouletteSession.StartingMoney;
+                round.BetUnit = rouletteSession.StartingBetUnit;
+            }
+
             if (round.Spin >= rouletteSession.SessionStart)
             {
                 if (rouletteSession.AllRounds.Last().Money > 0)
