@@ -53,7 +53,7 @@
 
                 <!-- USERNAME -->
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Your Name:" VerticalAlignment="Center" />
-                <TextBox Grid.Row="0" Grid.Column="1" Text="Guest" VerticalContentAlignment="Center" 
+                <TextBox Grid.Row="0" Grid.Column="1" Text="Nemanja" VerticalContentAlignment="Center" 
                  HorizontalContentAlignment="Center" Padding="2" Margin="0 3" x:Name="UsernameTextBox" />
 
                 <!-- STARTING MONEY -->
