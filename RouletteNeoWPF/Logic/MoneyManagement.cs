@@ -88,7 +88,7 @@ namespace RouletteNeoWPF.Logic
                 //  If the roulette session didn't start, but 0 happened, substract from the Session Goal and Starting Money
                 if (digit == 0)
                 {
-                    rouletteSession.StartingMoney -= rouletteSession.StartingBetUnit * 2;
+                    round.Money -= rouletteSession.StartingBetUnit * 2;
                     rouletteSession.Goal -= rouletteSession.StartingBetUnit * 2;
                 }
             }
