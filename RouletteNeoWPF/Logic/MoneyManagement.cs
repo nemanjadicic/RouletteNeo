@@ -11,7 +11,15 @@ namespace RouletteNeoWPF.Logic
         {
             if (round.Spin <= rouletteSession.SessionStart)
             {
-                round.Money = rouletteSession.StartingMoney;
+                if (rouletteSession.AllRounds.Any())
+                {
+                    round.Money = rouletteSession.AllRounds.Last().Money;
+                }
+                else
+                {
+                    round.Money = rouletteSession.StartingMoney;
+                }
+
                 round.BetUnit = rouletteSession.StartingBetUnit;
             }
 
@@ -67,14 +75,7 @@ namespace RouletteNeoWPF.Logic
             //  Calibrate money only if the Roulette Neo's session has started
             if (round.Spin > rouletteSession.SessionStart)
             {
-                if (rouletteSession.AllRounds.Last().Money > 0)
-                {
-                    round.Money = rouletteSession.AllRounds.Last().Money;
-                }
-                else
-                {
-                    round.Money = rouletteSession.StartingMoney;
-                }
+                round.Money = rouletteSession.AllRounds.Last().Money;
 
                 if (rouletteSession.AllRounds.Last().ExpectedNumbers.Contains(digit))
                 {
@@ -88,7 +89,9 @@ namespace RouletteNeoWPF.Logic
                 //  If the roulette session didn't start, but 0 happened, substract from the Session Goal and Starting Money
                 if (digit == 0)
                 {
-                    round.Money -= rouletteSession.StartingBetUnit * 2;
+                    var lastRoundMoney = rouletteSession.AllRounds.Last().Money;
+
+                    round.Money = lastRoundMoney - rouletteSession.StartingBetUnit * 2;
                     rouletteSession.Goal -= rouletteSession.StartingBetUnit * 2;
                 }
             }
