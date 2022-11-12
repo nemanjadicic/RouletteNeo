@@ -120,7 +120,7 @@ namespace RouletteNeoWPF.Logic
 
         public static List<int> GetExpectedNumbers(RouletteSessionView rouletteSession, Round round)
         {
-            int notHappenedDistance = 7;    // CHANGEABLE PARAMETER. Represents how far is Number's NotHappened value from the Number's AverageGap value.
+            int notHappenedDistance = 9;    // CHANGEABLE PARAMETER. Represents how far is Number's NotHappened value from the Number's AverageGap value.
 
             List<int> expectedNumbers = new List<int>();
             float globalAverageGap = CalculateGlobalAverageGap(rouletteSession);

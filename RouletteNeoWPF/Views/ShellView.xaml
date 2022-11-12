@@ -58,12 +58,12 @@
 
                 <!-- STARTING MONEY -->
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Starting Money:" VerticalAlignment="Center" />
-                <TextBox Grid.Row="1" Grid.Column="1" Text="2000.00" VerticalContentAlignment="Center" 
+                <TextBox Grid.Row="1" Grid.Column="1" Text="1000.00" VerticalContentAlignment="Center" 
                  HorizontalContentAlignment="Center" Padding="2" Margin="0 3" x:Name="StartingMoneyTextBox"/>
 
                 <!-- BETTING UNIT -->
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Betting Unit:" VerticalAlignment="Center" />
-                <TextBox Grid.Row="2" Grid.Column="1" Text="1.00" VerticalContentAlignment="Center" 
+                <TextBox Grid.Row="2" Grid.Column="1" Text="0.5" VerticalContentAlignment="Center" 
                  HorizontalContentAlignment="Center" Padding="2" Margin="0 3" x:Name="BettingUnitTextBox"/>
 
                 <!-- START BUTTON -->
